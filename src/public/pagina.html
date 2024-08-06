@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Univali HoW VII</title>
+    <link rel="icon" type="image/png" href="https://www.univali.br/Style%20Library/Univali/custom/marca/imgs/logo.png">
+    <style>
+        body{
+            font-family: Arial;
+        }
+
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        .botao-verifica-console{
+            background-color: rgba(40, 145, 206, 0.87);
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 12pt;
+            transition: background-color 1.5s ease, 
+                        font-size 0.5s ease,
+                        padding 0.1s linear;
+        }
+
+        .botao-verifica-console:hover{
+            background-color: rgba(40, 145, 206, 0.664);
+            padding: 11px;
+            font-size: 14pt;
+            cursor: pointer;
+        }
+
+    </style>
+    <script>
+        
+        async function exibeSelectConsole() {
+            console.log("Select das vendas: ", await obterImovelVenda());
+            
+
+        };
+
+        async function obterImovelVenda() {
+            const consultaImovelVenda = "/obtemImovelVenda";
+            const resultado = await window.fetch(consultaImovelVenda);
+            return await resultado.json();    
+        };
+
+    </script>
+</head>
+<body>
+    <div>
+        <a class="botao-verifica-console"
+           onclick="exibeSelectConsole()">Clique aqui e verifique o console!</a>
+    </div>
+</body>
+</html>
