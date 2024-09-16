@@ -1,4 +1,4 @@
-Passo a passo para a execução do sistema da etapa 1:
+Passo a passo para a execução do sistema da etapa 2:
 
 1 - Instale o NodeJs: https://nodejs.org/pt;
 
