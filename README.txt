@@ -12,4 +12,4 @@ Passo a passo para a execução do sistema da etapa 2:
 
 6- Utilize o comando "npm run iniciarProjeto" para inicar o projeto;
 
-Vídeo com passo a passo + funcionamento do sistema: https://youtu.be/tGYw5kt4nMk
+Vídeo com passo a passo + funcionamento do sistema: https://youtu.be/3Fy6FNx7Trw
