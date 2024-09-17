@@ -38,10 +38,8 @@
     </style>
     <script>
         
-        async function exibeSelectConsole() {
+        async function exibeSelectGeralConsole() {
             console.log("Select das vendas: ", await obterImovelVenda());
-            
-
         };
 
         async function obterImovelVenda() {
@@ -50,12 +48,56 @@
             return await resultado.json();    
         };
 
+        async function exibeSelectPorImovelConsole() {
+            console.log("Select das vendas: ", await obterVendaPorImovel());
+        };
+
+        async function obterVendaPorImovel() {
+            const consultaVendaPorImovel = "/obtemVendaPorImovel";
+            const resultado = await window.fetch(consultaVendaPorImovel);
+            return await resultado.json();    
+        };
+
+        async function exibeSelectPorDataConsole() {
+            console.log("Select das vendas: ", await obterVendaPorData());
+        };
+
+        async function obterVendaPorData() {
+            const consultaVendaPorData = "/obtemVendaPorData";
+            const resultado = await window.fetch(consultaVendaPorData);
+            return await resultado.json();    
+        };
+
+        async function exibeSelectVendaQuantitativaConsole() {
+            console.log("Select das vendas: ", await obterVendaQuantitativa());
+        };
+
+        async function obterVendaQuantitativa() {
+            const consultaVendaPorData = "/obtemVendaQuantitativa";
+            const resultado = await window.fetch(consultaVendaPorData);
+            return await resultado.json();    
+        };
+
     </script>
 </head>
 <body>
     <div>
-        <a class="botao-verifica-console"
-           onclick="exibeSelectConsole()">Clique aqui e verifique o console!</a>
+        <a class="botao-verifica-console" onclick="exibeSelectGeralConsole()">Clique aqui para obter todos os imóveis e
+            venda! (Parte 1)</a>
+    </div>
+    <div>
+        <a class="botao-verifica-console" onclick="exibeSelectPorImovelConsole()">Clique aqui para obter uma lista com o id de
+            cada imóvel e sua respectiva
+            soma de todos os pagamentos! (Parte 2 - A)</a>
+    </div>
+    <div>
+        <a class="botao-verifica-console" onclick="exibeSelectPorDataConsole()">Clique aqui para obter  uma lista com cada mês/ano e o total de vendas 
+            ocorridas no período! (Parte 2 - B)</a>
+    </div>
+    <div>
+        <a class="botao-verifica-console" onclick="exibeSelectVendaQuantitativaConsole()">Clique aqui para obter uma lista com cada tipo de imóvel registrado e o seu 
+            respectivo valor percentual no total de vendas (quantitativas) considerando toda série 
+            histórica! (Parte 2 - C)</a>
     </div>
 </body>
 </html>
